@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On The Way</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        li {
+            text-align: center;
+            color: green;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="bg-slate-500 p-4 flex gap-5 justify-center">
+            <p class="text-3xl text-white text-center" id="cart-count">0</p>
+            <h1 class="text-3xl text-white text-center">Cart Count</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <!-- bannar -->
+            <div class="bg-red-300 text-center p-10 text-4xl font-bold">
+                <h1>Lets travel</h1>
+                <p>Total Budget : <span id="budget">900</span>$</p>
+            </div>
+        </section>
+
+        <section class="mt-20 flex">
+            <!-- cards -->
+            <div class="space-y-5 flex-1">
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title">Sajek</h2>
+                        <p>Cost : <span>300</span>$</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary text-xl add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title">Cox-Bazar</h2>
+                        <p>Cost : <span>300</span>$</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary text-xl add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title">Sundarban</h2>
+                        <p>Cost : <span>400</span>$</p>
+                        <div class="card-actions justify-end">
+                            <button class="add-cart btn btn-primary text-xl">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <div class="card-body">
+                        <h2 class="card-title">Galaxy</h2>
+                        <p>Cost : <span>500</span>$</p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary text-xl add-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" shadow-xl p-10 text-xl space-y-4">
+                <!-- description -->
+                <h1>Cart</h1>
+                <hr>
+                <ul id="selected-place">
+                    
+                </ul>
+                <hr>
+                <p>Total Cost : <span id="total-cost">0</span>$</p>
+                <button onclick="grandTotalCost('bus')" class="btn btn-secondary">Bus +100</button>
+                <button onclick="grandTotalCost('train')" class="btn btn-neutral">Train -200</button>
+                <button onclick="grandTotalCost('flight')" class="btn btn-accent">Flight +500</button>
+                <hr>
+                <p>Grand total : <span id="grand-total">0</span>$</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
